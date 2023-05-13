@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ComposeNavigationTemplate</string>
+
+    <string name="intro_text">This is intro screen.\nYou can add paging or any UI you want to display as your introduction screen of your app.</string>
+
+    <string name="btn_continue">Continue</string>
+
+    <string name="login_text">This is Login screen.</string>
+
+    <string name="login">Login</string>
+
+    <string name="welcome">Welcome %1$s</string>
+
+</resources>
