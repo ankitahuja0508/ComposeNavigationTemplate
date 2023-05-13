@@ -1,63 +1,70 @@
-package com.aexyn.compose.navigation.template.ui.dashboard
+package com.aexyn.compose.navigation.template.screens.login
 
-import android.os.Parcelable
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.aexyn.compose.navigation.template.MainViewModel
 import com.aexyn.compose.navigation.template.R
 import com.aexyn.compose.navigation.template.components.Center
 import com.aexyn.compose.navigation.template.components.ScreenBody
+import com.aexyn.compose.navigation.template.components.VerticalSpacing
 import com.aexyn.compose.navigation.template.extensions.activityViewModel
+import com.aexyn.compose.navigation.template.extensions.offToDashboard
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
-import kotlinx.android.parcel.Parcelize
 
-@Parcelize
-data class User(
-    val name:String = "",
-    val email:String = "",
-    val photoUrl:String = "",
-): Parcelable
-
-data class DashboardScreenNavArgs(
-    val user: User = User(),
-)
-
-@Destination(navArgsDelegate = DashboardScreenNavArgs::class)
+@Destination
 @Composable
-fun DashboardScreen(
+fun LoginScreen(
     navigator: DestinationsNavigator,
     mainViewModel: MainViewModel = activityViewModel(),
-    viewModel: DashboardViewModel = hiltViewModel()
+    viewModel: LoginViewModel = hiltViewModel()
 ) {
 
-    DashboardView(
-        viewModel.state
+    LoginView(
+        login = {
+            viewModel.login()
+            navigator.offToDashboard(mainViewModel.getUser())
+        }
     )
 }
 
 @Composable
-fun DashboardView(
-    state:DashboardState
+fun LoginView(
+    login:()->Unit,
 ){
     ScreenBody(modifier = Modifier.fillMaxSize()) {
         Center() {
+
             Text(
-                text = stringResource(id = R.string.welcome, state.user.name)
+                text = stringResource(id = R.string.login_text),
+                textAlign = TextAlign.Center
             )
+
+            VerticalSpacing(height = 12.dp)
+
+            Button(
+                modifier = Modifier.fillMaxWidth(),
+                onClick = login
+            ) {
+                Text(
+                    text = stringResource(id = R.string.login)
+                )
+            }
         }
     }
 }
 
 @Composable
 @Preview(showBackground = true)
-fun DashboardPreview(){
-    DashboardView(
-        DashboardState(user = User("Test User", "test@email.com", "https://picsum.photos/200/200?random=11"))
-    )
+fun LoginPreview(){
+    LoginView(login={})
 }

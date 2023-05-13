@@ -1,4 +1,4 @@
-package com.aexyn.compose.navigation.template.ui.intro
+package com.aexyn.compose.navigation.template.screens.intro
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -20,7 +20,7 @@ import com.aexyn.compose.navigation.template.components.ScreenBody
 import com.aexyn.compose.navigation.template.components.VerticalSpacing
 import com.aexyn.compose.navigation.template.extensions.activityViewModel
 import com.aexyn.compose.navigation.template.extensions.offToDashboard
-import com.aexyn.compose.navigation.template.ui.destinations.LoginScreenDestination
+import com.aexyn.compose.navigation.template.screens.destinations.LoginScreenDestination
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.annotation.RootNavGraph
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator

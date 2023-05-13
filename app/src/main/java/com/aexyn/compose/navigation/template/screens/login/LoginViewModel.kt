@@ -1,11 +1,11 @@
-package com.aexyn.compose.navigation.template.ui.login
+package com.aexyn.compose.navigation.template.screens.login
 
 import android.app.Application
 import android.content.SharedPreferences
 import androidx.lifecycle.DefaultLifecycleObserver
 import com.aexyn.compose.navigation.template.base.BaseViewModel
 import com.aexyn.compose.navigation.template.extensions.saveModel
-import com.aexyn.compose.navigation.template.ui.dashboard.User
+import com.aexyn.compose.navigation.template.screens.dashboard.User
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

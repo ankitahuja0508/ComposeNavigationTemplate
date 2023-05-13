@@ -1,4 +1,4 @@
-package com.aexyn.compose.navigation.template.ui.dashboard
+package com.aexyn.compose.navigation.template.screens.dashboard
 
 import android.app.Application
 import androidx.compose.runtime.getValue
@@ -7,7 +7,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.SavedStateHandle
 import com.aexyn.compose.navigation.template.base.BaseViewModel
-import com.aexyn.compose.navigation.template.ui.destinations.DashboardScreenDestination
+import com.aexyn.compose.navigation.template.screens.destinations.DashboardScreenDestination
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

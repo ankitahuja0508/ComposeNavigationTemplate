@@ -7,7 +7,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import com.aexyn.compose.navigation.template.base.BaseViewModel
 import com.aexyn.compose.navigation.template.extensions.getUser
-import com.aexyn.compose.navigation.template.ui.dashboard.User
+import com.aexyn.compose.navigation.template.screens.dashboard.User
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
@@ -29,7 +29,7 @@ class MainViewModel @Inject constructor(
         )
     }
 
-    fun getUser():User{
+    fun getUser(): User {
         return sharedPreferences.getUser()
     }
 }

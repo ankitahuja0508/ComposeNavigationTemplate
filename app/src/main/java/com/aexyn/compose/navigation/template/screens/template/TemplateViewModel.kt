@@ -1,4 +1,4 @@
-package com.aexyn.compose.navigation.template.ui.intro
+package com.aexyn.compose.navigation.template.screens.template
 
 import android.app.Application
 import androidx.lifecycle.DefaultLifecycleObserver
@@ -6,9 +6,7 @@ import com.aexyn.compose.navigation.template.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
-
 @HiltViewModel
-class IntroViewModel @Inject constructor(
+class TemplateViewModel @Inject constructor(
     app: Application,
-) : BaseViewModel(app), DefaultLifecycleObserver {
-}
+) : BaseViewModel(app), DefaultLifecycleObserver {}
