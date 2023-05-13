@@ -1,4 +1,4 @@
-package com.aexyn.compose.navigation.template.ui.template
+package com.aexyn.compose.navigation.template.screens.template
 
 import android.app.Application
 import androidx.lifecycle.DefaultLifecycleObserver
