@@ -9,8 +9,10 @@ import com.aexyn.compose.navigation.template.MainViewModel
 import com.aexyn.compose.navigation.template.components.ScreenBody
 import com.aexyn.compose.navigation.template.extensions.activityViewModel
 import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.annotation.RootNavGraph
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
+@RootNavGraph(start = true)
 @Destination
 @Composable
 fun TemplateScreen(

@@ -8,7 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.aexyn.compose.navigation.template.extensions.lifecycleViewModels
-import com.aexyn.compose.navigation.template.ui.NavGraphs
+import com.aexyn.compose.navigation.template.ui.template.NavGraphs
 import com.aexyn.compose.navigation.template.ui.theme.ComposeNavigationTemplateTheme
 import com.ramcosta.composedestinations.DestinationsNavHost
 import dagger.hilt.android.AndroidEntryPoint

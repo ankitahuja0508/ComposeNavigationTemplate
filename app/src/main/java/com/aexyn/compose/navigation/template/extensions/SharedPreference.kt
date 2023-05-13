@@ -1,7 +1,6 @@
 package com.aexyn.compose.navigation.template.extensions
 
 import android.content.SharedPreferences
-import com.aexyn.compose.navigation.template.ui.dashboard.User
 import com.google.gson.Gson
 
 fun SharedPreferences.saveInt(key:String, value:Int){
@@ -54,12 +53,4 @@ fun SharedPreferences.getSavedBool(key:String, defValue:Boolean=false):Boolean{
 
 fun SharedPreferences.getSavedStringSet(key:String, defValue:Set<String>?=setOf()):Set<String>?{
     return this.getStringSet(key, defValue)
-}
-
-fun SharedPreferences.getUser():User{
-    return Gson().fromJson(this.getSavedString("USER_KEY", "{\"name\":\"\"}"), User::class.java)
-}
-
-fun SharedPreferences.isLoggedIn():Boolean{
-    return this.getSavedString("USER_KEY").isNotEmpty()
 }
