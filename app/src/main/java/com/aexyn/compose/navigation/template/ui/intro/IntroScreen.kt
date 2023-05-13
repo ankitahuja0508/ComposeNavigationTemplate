@@ -22,10 +22,12 @@ import com.aexyn.compose.navigation.template.extensions.activityViewModel
 import com.aexyn.compose.navigation.template.extensions.offToDashboard
 import com.aexyn.compose.navigation.template.ui.destinations.LoginScreenDestination
 import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.annotation.RootNavGraph
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 
-@Destination(start = true)
+@RootNavGraph(start = true)
+@Destination
 @Composable
 fun IntroScreen(
     navigator: DestinationsNavigator,
