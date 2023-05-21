@@ -10,6 +10,7 @@ import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.annotation.RootNavGraph
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import stupefying.labs.MainViewModel
+import stupefying.labs.components.Center
 import stupefying.labs.components.ScreenBody
 import stupefying.labs.extensions.activityViewModel
 
@@ -28,7 +29,9 @@ fun TemplateScreen(
 fun TemplateView(
 ){
     ScreenBody(modifier = Modifier.fillMaxSize()) {
-        Text("Template Screen")
+        Center {
+            Text("Template Screen")
+        }
     }
 }
 
