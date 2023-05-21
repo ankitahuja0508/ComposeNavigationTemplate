@@ -13,7 +13,6 @@ import stupefying.labs.MainViewModel
 import stupefying.labs.components.ScreenBody
 import stupefying.labs.extensions.activityViewModel
 
-@RootNavGraph(start = true)
 @Destination
 @Composable
 fun TemplateScreen(

@@ -2,6 +2,7 @@ package stupefying.labs.extensions
 
 import android.content.SharedPreferences
 import com.google.gson.Gson
+import stupefying.labs.screens.dashboard.User
 
 fun SharedPreferences.saveInt(key:String, value:Int){
     this.edit().putInt(key, value).apply()
@@ -53,4 +54,8 @@ fun SharedPreferences.getSavedBool(key:String, defValue:Boolean=false):Boolean{
 
 fun SharedPreferences.getSavedStringSet(key:String, defValue:Set<String>?=setOf()):Set<String>?{
     return this.getStringSet(key, defValue)
+}
+
+fun SharedPreferences.getUser(): User {
+    return Gson().fromJson(this.getSavedString("USER_KEY", "{\"name\":\"\"}"), User::class.java)
 }
