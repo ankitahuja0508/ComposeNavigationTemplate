@@ -5,4 +5,4 @@ This is basic app architecture which has Hilt for dependency injection, https://
 
 TemplateScreen is added. You can easily copy template package and create your new screen. Add your custom UI as per screen and you are good to go.
 
-If you need project with sample screens like Intro, Login, Dashboard. Clone different branch. **withSampleScreens**
+If you need project with sample screens like Intro, Login, Dashboard. Clone different branch. [withSampleScreens](https://github.com/ankitahuja0508/ComposeNavigationTemplate/tree/withSampleScreens)
