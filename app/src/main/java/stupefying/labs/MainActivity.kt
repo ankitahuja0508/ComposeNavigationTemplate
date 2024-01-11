@@ -11,7 +11,7 @@ import stupefying.labs.extensions.lifecycleViewModels
 import stupefying.labs.ui.theme.ComposeNavigationTemplateTheme
 import com.ramcosta.composedestinations.DestinationsNavHost
 import dagger.hilt.android.AndroidEntryPoint
-import stupefying.labs.screens.template.NavGraphs
+import stupefying.labs.screens.NavGraphs
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
